@@ -1,7 +1,7 @@
 LibSimpleKt - 轻量的Kotlin类库
 ---
 
-# 类/文件一览
+## 类/文件一览
 ```
 src/lib/config/JsonConfig.kt	从Json配置文件以key->value的形式读取字符串
 src/lib/process/Shell.kt	执行shell命令
