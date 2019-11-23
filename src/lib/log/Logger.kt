@@ -10,17 +10,8 @@ package lib.log
  * Obj#foo()'s index is 2
  */
 class Logger(private val name: String = "Logger") {
-	fun d(msg: String) {
-		val trace: Array<StackTraceElement>?  = Thread.currentThread().stackTrace
-
-		if (trace == null || trace.size < 3) return println("Logger@$name $msg")
-
-		val caller = trace[2]
-
-		with (caller) {
-			val output = "Logger@$name ~ $fileName($lineNumber) ~ $className.$methodName(): $msg"
-			println(output)
-		}
+	inline fun d(msg: String) {
+        d(msg, "")
 	}
 
 	fun d(title: String, msg: String) {
